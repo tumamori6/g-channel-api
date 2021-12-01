@@ -6,8 +6,9 @@ $contents = new GetContentsClass();
 
 $data = [];
 //$data = $model->getAll
-$data = $contents->getArticleList(CONTENTS_URL);
+$datas = $contents->getArticleList(CONTENTS_URL);
 // scheduler... php /app/cron.php
+$contents->addArticlesData($datas);
 
 include('index.html');
 ?>

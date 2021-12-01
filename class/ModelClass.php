@@ -10,7 +10,7 @@ class ModelClass extends CommonClass
 		$this->_pdo          = $this->dbConnect();
 	}
 
-	public function queryPostParams($sql, $params)
+	public function bindParams($sql, $params)
 	{
 		$query = $this->_pdo->prepare($sql);
 
@@ -20,6 +20,30 @@ class ModelClass extends CommonClass
 
 		$query->execute();
 		return $query;
+	}
+
+	//todo #1 created_at updated_at delete_flg
+	public function createAddArticleSql($table_name)
+	{
+		$sql = "
+			INSERT INTO
+    {$table_name}
+				(
+					id,
+					title,
+					url,
+					category
+				)
+				VALUES
+				(
+					:id,
+					:title,
+					:url,
+					:category
+				)
+				
+		";
+		return $sql;
 	}
 
 	public function getAll($table_name)

@@ -66,9 +66,15 @@ class GetContentsClass extends ModelClass
 
 	}
 
-	// public function addArticlesData($datas)
-	// {
+	public function addArticlesData($datas)
+	{
+		$sql = $this->createAddArticleSql('tests');
+		foreach($datas as $data){
+			$params = $this->bindParams($sql,$data);
+			$this->bindParams($sql,$params);
+		}
+		$this->debug('Success : addArticlesData');
 
-	// }
+	}
 
 }
