@@ -52,9 +52,9 @@ class GetContentsClass extends ModelClass
 		array_splice($datas,10);
 
 		foreach($datas as $data){
-			$obj                  = $this->htmlConvertObject($data['article_url']);
+			$obj                  = $this->htmlConvertObject($data[':url']);
 			$comments             = $obj['.topic-comment .comment-item'];
-			$data['comments_cnt'] = count($comments);
+			$data[':comments_cnt'] = count($comments);
 			$opt_datas[] = $data;
 			sleep(.5);
 		}
@@ -70,7 +70,7 @@ class GetContentsClass extends ModelClass
 	{
 		$sql = $this->createAddArticleSql('tests');
 		foreach($datas as $data){
-			$this->bindParams($sql,$data);
+			$this->postParams($sql,$data);
 		}
 		$this->debug('Success : addArticlesData');
 

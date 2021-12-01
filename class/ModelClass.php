@@ -10,7 +10,7 @@ class ModelClass extends CommonClass
 		$this->_pdo          = $this->dbConnect();
 	}
 
-	public function bindParams($sql, $params)
+	public function postParams($sql, $params)
 	{
 		$query = $this->_pdo->prepare($sql);
 
@@ -31,13 +31,15 @@ class ModelClass extends CommonClass
 				(
 					title,
 					url,
-					category
+					category,
+					comments_cnt
 				)
 				VALUES
 				(
 					:title,
 					:url,
-					:category
+					:category,
+					:comments_cnt
 				)
 				
 		";
