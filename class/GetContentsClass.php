@@ -44,12 +44,14 @@ class GetContentsClass
 			];
 		}
 
+		array_splice($datas,10);
+
 		foreach($datas as $data){
 			$obj                  = $this->htmlConvertObject($data['article_url']);
 			$comments             = $obj['.topic-comment .comment-item'];
 			$data['comments_cnt'] = count($comments);
 			$opt_datas[] = $data;
-			sleep(5);
+			sleep(2);
 		}
 
 		return $opt_datas;
