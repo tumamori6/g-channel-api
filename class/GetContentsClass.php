@@ -1,7 +1,5 @@
 <?
 
-require(dirname(__FILE__) . '/CommonClass.php');
-
 class GetContentsClass
 {
 	public function __construct()
