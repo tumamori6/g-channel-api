@@ -51,7 +51,7 @@ class GetContentsClass
 			$comments             = $obj['.topic-comment .comment-item'];
 			$data['comments_cnt'] = count($comments);
 			$opt_datas[] = $data;
-			sleep(2);
+			sleep(.5);
 		}
 
 		return $opt_datas;
