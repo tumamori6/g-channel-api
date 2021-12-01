@@ -48,11 +48,12 @@ class GetContentsClass
 
 	public function getLatestArticle($url)
 	{
-		$datas = $this->getArticleList($url);
-		$latest_article_url = $datas[0]['article_url'];
-		$obj = $this->htmlConvertObject($latest_article_url);
-		$comments = $obj['.topic-comment .comment-item'];
-		return $comments;
+		$datas                 = $this->getArticleList($url);
+		$latest_article_url    = $datas[0]['article_url'];
+		$obj                   = $this->htmlConvertObject($latest_article_url);
+		$comments              = $obj['.topic-comment .comment-item'];
+		$datas['comments_cnt'] = count($comments);
+		return $datas;
 	}
 
 }
