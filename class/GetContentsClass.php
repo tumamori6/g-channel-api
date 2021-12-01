@@ -43,18 +43,16 @@ class GetContentsClass
 			];
 		}
 
-		return $datas;
-	}
+		foreach($datas as $data){
+			$obj                  = $this->htmlConvertObject($data['article_url']);
+			$comments             = $obj['.topic-comment .comment-item'];
+			$data['comments_cnt'] = count($comments);
+			$opt_datas[] = $data;
+			sleep(5);
+		}
 
-	public function getLatestArticle($url)
-	{
-		$datas                          = $this->getArticleList($url);
-		$latest_article                 = $datas[0];
-		$latest_article_url             = $latest_article['article_url'];
-		$obj                            = $this->htmlConvertObject($latest_article_url);
-		$comments                       = $obj['.topic-comment .comment-item'];
-		$latest_article['comments_cnt'] = count($comments);
-		return $latest_article;
+		return $opt_datas;
+
 	}
 
 }
