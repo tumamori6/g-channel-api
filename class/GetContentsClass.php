@@ -19,7 +19,13 @@ class GetContentsClass
 	{
 		$obj					 = $this->htmlConvertObject($url);
 		$articles = $obj['.main > .topic-list-wrap > .topic-list > li > a'];
-		return $articles;
+
+		foreach ($articles as $val) {
+			$arr['title'][] = utf8_decode(pq($val)->find('.title')->text());
+			$arr['url'][]   = 'https://girlschannel.net'.pq($val)->attr("href");
+		}
+
+		return $arr;
 	}
 
 }
