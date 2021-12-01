@@ -1,5 +1,52 @@
 {
-    "packages": [],
+    "packages": [
+        {
+            "name": "bariew/phpquery",
+            "version": "1.0.3",
+            "version_normalized": "1.0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bariew/phpquery.git",
+                "reference": "233afd67f5d8188fa87b95ae9371e5aadd3dd927"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bariew/phpquery/zipball/233afd67f5d8188fa87b95ae9371e5aadd3dd927",
+                "reference": "233afd67f5d8188fa87b95ae9371e5aadd3dd927",
+                "shasum": ""
+            },
+            "time": "2015-12-29T11:19:32+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "phpQuery/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tobiasz Cudnik",
+                    "email": "tobiasz.cudnik@gmail.com",
+                    "homepage": "https://github.com/TobiaszCudnik",
+                    "role": "Developer"
+                },
+                {
+                    "name": "didier Belot",
+                    "role": "Packager"
+                }
+            ],
+            "description": "phpQuery is a server-side, chainable, CSS3 selector driven Document Object Model (DOM) API based on jQuery JavaScript Library",
+            "homepage": "http://code.google.com/p/phpquery/",
+            "support": {
+                "source": "https://github.com/bariew/phpquery/tree/master"
+            },
+            "install-path": "../bariew/phpquery"
+        }
+    ],
     "dev": true,
     "dev-package-names": []
 }

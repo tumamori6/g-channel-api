@@ -1,6 +1,7 @@
 {
 	"require": {
 		"php": "~7.0",
-		"ext-mbstring": "*"
+		"ext-mbstring": "*",
+		"bariew/phpquery": "^1.0"
 	}
 }

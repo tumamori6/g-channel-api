@@ -10,4 +10,6 @@ heroku addons:create cleardb:ignite --app {app-name}
 heroku config
 `CLEARDB_DATABASE_URL: mysql://[Username]:[Password]@[Hostname]...
 
-
+# Step3
+### add phpQuery
+composer require bariew/phpquery
