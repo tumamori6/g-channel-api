@@ -4,7 +4,6 @@ require('class/GetContentsClass.php');
 $model = new ModelClass();
 $contents = new GetContentsClass();
 
-$model->debug('index.php');
 ini_set('log_errors', 'On');
 ini_set('error_log', dirname(__FILE__) . '/log/error.log');
 error_log("__________________________________________");
