@@ -6,7 +6,8 @@ $contents = new GetContentsClass();
 
 //$data = $contents->getArticleList(CONTENTS_URL);
 //$data = file_get_contents(CONTENTS_URL);
-$data = file_get_contents('https://girlschannel.net/topics/3717103/');
+//$data = file_get_contents('https://girlschannel.net/topics/3717103/');
+$data = $contents->getLatestArticle(CONTENTS_URL);
 
 include('index.html');
 ?>

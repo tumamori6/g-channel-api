@@ -20,7 +20,7 @@ class GetContentsClass
 		$category = DEFAULT_CATEGORY;
 
 		for ($i = 0; $i < count(CATEGORY_LIST); $i++) {
-			if(strpos($title, CATEGORY_LIST[$i]) !== false){
+			if (strpos($title, CATEGORY_LIST[$i]) !== false) {
 				$category = CATEGORY_LIST[$i];
 			}
 		}
@@ -44,6 +44,15 @@ class GetContentsClass
 		}
 
 		return $datas;
+	}
+
+	public function getLatestArticle($url)
+	{
+		$datas = $this->getArticleList($url);
+		$latest_article_url = $datas[0]['article_url'];
+		$obj = $this->htmlConvertObject($latest_article_url);
+		$comments = $obj['.topic-comment .comment-item'];
+		return $comments;
 	}
 
 }
