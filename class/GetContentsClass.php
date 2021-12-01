@@ -1,12 +1,12 @@
 <?
 
-require(dirname(__FILE__) . '/CommonClass.php');
 
-class GetContentsClass extends CommonClass
+class GetContentsClass
 {
 	public function __construct()
 	{
-		parent::__construct();
+		require(dirname(__FILE__) . '/CommonClass.php');
+		$this->_common = new CommonClass();
 		require(dirname(__FILE__) . '/../vendor/autoload.php');
 	}
 
@@ -56,7 +56,7 @@ class GetContentsClass extends CommonClass
 			sleep(.5);
 		}
 
-		$this->debug('Success : getArticleList');
+		$this->_common->debug('Success : getArticleList');
 
 		return $opt_datas;
 
