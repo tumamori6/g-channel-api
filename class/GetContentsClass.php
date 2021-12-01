@@ -32,7 +32,7 @@ class GetContentsClass
 		// 	$datas['url']   = $article_url;
 		// }
 
-		return $datas;
+		return $obj;
 
 	}
 
