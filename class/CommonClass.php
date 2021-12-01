@@ -15,7 +15,7 @@ class CommonClass
 
 	public function debug($message){
 		ini_set('log_errors', 'On');
-		ini_set('error_log', '/app/log/error.log');
+		ini_set('error_log', dirname(__FILE__) . '/../log/error.log');
 		error_log("/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/");
 		error_log($message);
 	}

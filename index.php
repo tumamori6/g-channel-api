@@ -5,9 +5,8 @@ $model = new ModelClass();
 $contents = new GetContentsClass();
 
 $data = [];
-$model->debug('index.php');
 //$data = $model->getAll
-//$data = $contents->getArticleList(CONTENTS_URL);
+$data = $contents->getArticleList(CONTENTS_URL);
 
 include('index.html');
 ?>
