@@ -1,8 +1,8 @@
 <?
 
-require(dirname(__FILE__) . '/CommonClass.php');
+require(dirname(__FILE__) . '/ModelClass.php');
 
-class GetContentsClass extends CommonClass
+class GetContentsClass extends ModelClass
 {
 	public function __construct()
 	{
