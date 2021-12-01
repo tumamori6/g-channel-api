@@ -29,14 +29,12 @@ class ModelClass extends CommonClass
 			INSERT INTO
     {$table_name}
 				(
-					id,
 					title,
 					url,
 					category
 				)
 				VALUES
 				(
-					:id,
 					:title,
 					:url,
 					:category
