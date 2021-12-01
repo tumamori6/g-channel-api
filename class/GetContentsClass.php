@@ -17,10 +17,13 @@ class GetContentsClass
 
 	private function checkCategory($title)
 	{
-		for ($i = 0; $i < count(CATEGORY_LIST); $i++) {
-			$category = strpos($title, CATEGORY_LIST[$i]) !== false ? CATEGORY_LIST[$i] : DEFAULT_CATEGORY;
-		}
+		$category = DEFAULT_CATEGORY;
 
+		for ($i = 0; $i < count(CATEGORY_LIST); $i++) {
+			if(strpos($title, CATEGORY_LIST[$i]) !== false){
+				$category = CATEGORY_LIST[$i];
+			}
+		}
 		return $category;
 	}
 
