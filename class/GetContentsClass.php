@@ -29,8 +29,9 @@ class GetContentsClass
 
 	public function getArticleList($url)
 	{
-		$obj					 = $this->htmlConvertObject($url);
-		$articles = $obj['.main > .topic-list-wrap > .topic-list > li > a'];
+		$obj					  = $this->htmlConvertObject($url);
+		$articles  = $obj['.main > .topic-list-wrap > .topic-list > li > a'];
+		$opt_datas = [];
 
 		foreach ($articles as $article) {
 			$article_title = utf8_decode(pq($article)->find('.title')->text());
