@@ -9,6 +9,7 @@ define('DB_PASS', $db_url['pass']);
 
 //コンテンツ関係
 define('CONTENTS_URL','https://girlschannel.net/topics/category/cook/');
+define('DEFAULT_CATEGORY','料理');
 define('CATEGORY_LIST',[
 	'カフェ',
 	'スイーツ',
