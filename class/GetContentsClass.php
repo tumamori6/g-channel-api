@@ -70,8 +70,7 @@ class GetContentsClass extends ModelClass
 	{
 		$sql = $this->createAddArticleSql('tests');
 		foreach($datas as $data){
-			$params = $this->bindParams($sql,$data);
-			$this->bindParams($sql,$params);
+			$this->bindParams($sql,$data);
 		}
 		$this->debug('Success : addArticlesData');
 
