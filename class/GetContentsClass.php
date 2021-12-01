@@ -60,7 +60,7 @@ class GetContentsClass extends CommonClass
 		}
 
 		$processing_time = microtime(true) - $process_start;
-		$this->debug('Success : getArticleList / '.$processing_time.'秒');
+		$this->debug('Success : getArticleList / '.$processing_time.'sec');
 
 		return $opt_datas;
 
