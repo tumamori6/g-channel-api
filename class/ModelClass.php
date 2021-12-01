@@ -28,7 +28,7 @@ class ModelClass extends CommonClass
    SELECT
 			*
 			FROM
-    {$table_name}
+    ".$table_name."
    LIMIT
     100
    ";

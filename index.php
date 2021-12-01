@@ -1,6 +1,6 @@
 <?
 require('class/ModelClass.php');
-//$model = new ModelClass();
+$model = new ModelClass();
 //$data  = $model->getAll('tests');
 
 
