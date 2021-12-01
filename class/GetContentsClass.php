@@ -6,8 +6,6 @@ class GetContentsClass
 	{
 		require(dirname(__FILE__) . '/../_def.php');
 		require(dirname(__FILE__) . '/../vendor/autoload.php');
-		require(dirname(__FILE__) . '/CommonClass.php');
-		$this->common = new CommonClass();
 	}
 
 	private function htmlConvertObject($url)
