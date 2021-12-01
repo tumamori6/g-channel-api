@@ -15,4 +15,11 @@ class GetContentsClass
 		return $obj;
 	}
 
+	public function getArticleList($url)
+	{
+		$obj					 = $this->htmlConvertObject($url);
+		$articles = $obj['.main > .topic-list-wrap > .topic-list > li > a'];
+		return $articles;
+	}
+
 }
