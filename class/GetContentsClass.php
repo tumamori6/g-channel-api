@@ -49,20 +49,21 @@ class GetContentsClass extends ModelClass
 			];
 		}
 
-		array_splice($datas,10);
+		// array_splice($datas,10);
 
-		foreach($datas as $data){
-			$obj                  = $this->htmlConvertObject($data['url']);
-			$comments             = $obj['.topic-comment .comment-item'];
-			$data['comments_cnt'] = count($comments);
-			$opt_datas[] = $data;
-			sleep(.5);
-		}
+		// foreach($datas as $data){
+		// 	$obj                  = $this->htmlConvertObject($data['url']);
+		// 	$comments             = $obj['.topic-comment .comment-item'];
+		// 	$data['comments_cnt'] = count($comments);
+		// 	$opt_datas[] = $data;
+		// 	sleep(.5);
+		// }
 
-		$processing_time = microtime(true) - $process_start;
-		$this->debug('Success : getArticleList / '.$processing_time.'sec');
+		// $processing_time = microtime(true) - $process_start;
+		// $this->debug('Success : getArticleList / '.$processing_time.'sec');
 
-		return $opt_datas;
+		// return $opt_datas;
+		return $datas;
 
 	}
 
