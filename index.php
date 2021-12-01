@@ -4,8 +4,12 @@ require('class/GetContentsClass.php');
 $model = new ModelClass();
 $contents = new GetContentsClass();
 
+error_log("__________________________________________");
+error_log("index.php");
+error_log("__________________________________________");
+//$data = $model->getAll
 //$data = $contents->getArticleList(CONTENTS_URL);
-$data = dirname(__FILE__);
+// scheduler... php /app/cron.php
 
 include('index.html');
 ?>
