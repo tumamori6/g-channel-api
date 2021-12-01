@@ -6,7 +6,7 @@ class GetContentsClass extends CommonClass
 {
 	public function __construct()
 	{
-		parent::__construct();
+		require(dirname(__FILE__) . '/../_def.php');
 		require(dirname(__FILE__) . '/../vendor/autoload.php');
 	}
 
