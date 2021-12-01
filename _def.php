@@ -8,9 +8,7 @@ define('DB_USER', $db_url['user']);
 define('DB_PASS', $db_url['pass']);
 
 //コンテンツ関係
-define('URL_LIST',[
-	[CATEGORY,'https://girlschannel.net/topics/category/cook/']
-]);
+define('CONTENTS_URL','https://girlschannel.net/topics/category/cook/');
 define('CATEGORY_LIST',[
 	'カフェ',
 	'スイーツ',
