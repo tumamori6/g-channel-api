@@ -1,5 +1,5 @@
 <?
-//require('class/ModelClass.php');
+require('class/ModelClass.php');
 //$model = new ModelClass();
 //$data  = $model->getAll('tests');
 
