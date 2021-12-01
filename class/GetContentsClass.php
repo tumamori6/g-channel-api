@@ -56,6 +56,8 @@ class GetContentsClass extends CommonClass
 			sleep(.5);
 		}
 
+		$this->debug('Success : getArticleList');
+
 		return $opt_datas;
 
 	}
