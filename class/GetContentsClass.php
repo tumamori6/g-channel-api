@@ -32,7 +32,7 @@ class GetContentsClass extends CommonClass
 	public function getArticleList($url)
 	{
 
-		$time_start = microtime(true);
+		$process_start = microtime(true);
 
 		$obj					  = $this->htmlConvertObject($url);
 		$articles  = $obj['.main > .topic-list-wrap > .topic-list > li > a'];
@@ -59,7 +59,8 @@ class GetContentsClass extends CommonClass
 			sleep(.5);
 		}
 
-		$this->debug('Success : getArticleList / '.microtime(true) - $time_start.'秒');
+		$processing_time = microtime(true) - $process_start;
+		$this->debug('Success : getArticleList / '.$processing_time.'秒');
 
 		return $opt_datas;
 
