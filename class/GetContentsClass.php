@@ -20,12 +20,16 @@ class GetContentsClass
 		$obj					 = $this->htmlConvertObject($url);
 		$articles = $obj['.main > .topic-list-wrap > .topic-list > li > a'];
 
-		foreach ($articles as $val) {
-			$arr['title'][] = utf8_decode(pq($val)->find('.title')->text());
-			$arr['url'][]   = 'https://girlschannel.net'.pq($val)->attr("href");
+		foreach ($articles as $article) {
+			$article_title = utf8_decode(pq($article)->find('.title')->text());
+			$article_url   = 'https://girlschannel.net'.pq($article)->attr("href");
+			$datas[] = [
+				'article_title' => $article_title,
+				'article_url'   => $article_url,
+			];
 		}
 
-		return $arr;
+		return $datas;
 	}
 
 }
