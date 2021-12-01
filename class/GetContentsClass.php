@@ -1,12 +1,12 @@
 <?
 
+require(dirname(__FILE__) . '/CommonClass.php');
 
 class GetContentsClass
 {
 	public function __construct()
 	{
-		require(dirname(__FILE__) . '/CommonClass.php');
-		$this->_common = new CommonClass();
+		require(dirname(__FILE__) . '/../_def.php');
 		require(dirname(__FILE__) . '/../vendor/autoload.php');
 	}
 
@@ -55,8 +55,6 @@ class GetContentsClass
 			$opt_datas[] = $data;
 			sleep(.5);
 		}
-
-		$this->_common->debug('Success : getArticleList');
 
 		return $opt_datas;
 
