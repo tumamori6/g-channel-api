@@ -6,8 +6,8 @@ class ModelClass extends CommonClass
 {
 	public function __construct()
 	{
-		parent::__construct();
-		$this->_pdo          = $this->dbConnect();
+		//parent::__construct();
+		//$this->_pdo          = $this->dbConnect();
 	}
 
 	// public function queryPost($pdo, $sql, $param)
