@@ -43,18 +43,18 @@ class GetContentsClass extends ModelClass
 			$article_url   = 'https://girlschannel.net' . pq($article)->attr("href");
 			$category      = $this->checkCategory($article_title);
 			$datas[] = [
-				':title'   => $article_title,
-				':url'     => $article_url,
-				':category'=> $category,
+				'title'   => $article_title,
+				'url'     => $article_url,
+				'category'=> $category,
 			];
 		}
 
 		array_splice($datas,10);
 
 		foreach($datas as $data){
-			$obj                  = $this->htmlConvertObject($data[':url']);
+			$obj                  = $this->htmlConvertObject($data['url']);
 			$comments             = $obj['.topic-comment .comment-item'];
-			$data[':comments_cnt'] = count($comments);
+			$data['comments_cnt'] = count($comments);
 			$opt_datas[] = $data;
 			sleep(.5);
 		}
