@@ -10,16 +10,16 @@ class ModelClass extends CommonClass
 		$this->_pdo          = $this->dbConnect();
 	}
 
-	public function queryPost($pdo, $sql, $param)
+	public function queryPostParams($sql, $params)
 	{
-		$stmt = $pdo->prepare($sql);
+		$query = $this->_pdo->prepare($sql);
 
-		foreach ($param as $key => $val) {
-			$stmt->bindValue($key, $val);
+		foreach ($params as $key => $val) {
+			$query->bindValue($key, $val);
 		}
 
-		$stmt->execute();
-		return $stmt;
+		$query->execute();
+		return $query;
 	}
 
 	public function getAll($table_name)
@@ -36,6 +36,4 @@ class ModelClass extends CommonClass
 		$list = $this->_pdo->query($sql)->fetchAll();
 		return $list;
 	}
-
-
 }

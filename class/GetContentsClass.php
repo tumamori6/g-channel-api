@@ -43,9 +43,9 @@ class GetContentsClass extends ModelClass
 			$article_url   = 'https://girlschannel.net' . pq($article)->attr("href");
 			$category      = $this->checkCategory($article_title);
 			$datas[] = [
-				'article_title' => $article_title,
-				'article_url'   => $article_url,
-				'category'      => $category,
+				':title'   => $article_title,
+				':url'     => $article_url,
+				':category'=> $category,
 			];
 		}
 
@@ -65,5 +65,10 @@ class GetContentsClass extends ModelClass
 		return $opt_datas;
 
 	}
+
+	// public function addArticlesData($datas)
+	// {
+
+	// }
 
 }
