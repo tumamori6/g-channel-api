@@ -4,7 +4,7 @@ class CommonClass
 {
 	public function __construct()
 	{
-		require(dirname(__FILE__) . '/../def.php');
+		require(dirname(__FILE__) . '/../_def.php');
 	}
 
 	public function dbConnect()
