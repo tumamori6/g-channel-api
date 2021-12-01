@@ -33,7 +33,7 @@ class GetContentsClass
 		foreach ($articles as $article) {
 			$article_title = utf8_decode(pq($article)->find('.title')->text());
 			$article_url   = 'https://girlschannel.net' . pq($article)->attr("href");
-			$category      = $this->checkCategory(utf8_decode(pq($article)->find('.title')->text()));
+			$category      = $this->checkCategory($article_title);
 			$datas[] = [
 				'article_title' => $article_title,
 				'article_url'   => $article_url,
