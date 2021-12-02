@@ -1,6 +1,6 @@
 <?
 
-require(dirname(__FILE__) . '/class/ModelClass.php');
+require(dirname(__FILE__) . 'class/ModelClass.php');
 $model = new ModelContentsClass();
 
 // $contents = new GetContentsClass();
