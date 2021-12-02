@@ -68,7 +68,7 @@ class GetContentsClass extends ModelClass
 
 	public function addArticlesData($datas)
 	{
-		$sql = $this->createAddArticleSql('tests');
+		$sql = $this->createAddArticleSql('contents');
 		foreach($datas as $data){
 			$this->postParams($sql,$data);
 		}
