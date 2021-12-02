@@ -22,7 +22,7 @@ class ModelClass extends CommonClass
 		return $query;
 	}
 
-	//todo #1 created_at updated_at delete_flg
+	//todo #2 カラム外だし
 	public function createAddArticleSql($table_name)
 	{
 		$sql = "
