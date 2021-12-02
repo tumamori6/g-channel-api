@@ -1,10 +1,5 @@
 <?
 require(dirname(__FILE__) . '/class/GetContentsClass.php');
-
-$datas = new GetContentsClass();
-
-if($datas){
-	echo 'ok';
-}else{
-	echo 'ng';
-}
+$contents = new GetContentsClass();
+$datas    = $contents->getArticleList(CONTENTS_URL);
+$contents->addArticlesData($datas);
