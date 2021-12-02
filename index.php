@@ -4,7 +4,7 @@ require('class/GetContentsClass.php');
 
 $contents = new GetContentsClass();
 
-$data = [];
+$datas = [];
 //$data = $model->getAll
 $datas = $contents->getArticleList(CONTENTS_URL);
 // scheduler... php /app/cron.php

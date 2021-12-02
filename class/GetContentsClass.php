@@ -56,7 +56,6 @@ class GetContentsClass extends ModelClass
 			$comments             = $obj['.topic-comment .comment-item'];
 			$data['comments_cnt'] = count($comments);
 			$opt_datas[] = $data;
-			sleep(.1);
 		}
 
 		$processing_time = microtime(true) - $process_start;
