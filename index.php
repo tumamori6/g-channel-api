@@ -11,5 +11,5 @@ $model = new ModelClass();
 
 $datas = $model->getAll('contents');
 
-echo json_encode($datas);
+echo json_encode($datas,JSON_UNESCAPED_UNICODE);
 
