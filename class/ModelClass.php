@@ -32,14 +32,16 @@ class ModelClass extends CommonClass
 					title,
 					url,
 					category,
-					comments_cnt
+					comments_cnt,
+					created_at
 				)
 				VALUES
 				(
 					:title,
 					:url,
 					:category,
-					:comments_cnt
+					:comments_cnt,
+					:created_at
 				)
 				
 		";

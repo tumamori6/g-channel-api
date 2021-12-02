@@ -55,6 +55,7 @@ class GetContentsClass extends ModelClass
 			$obj                  = $this->htmlConvertObject($data['url']);
 			$comments             = $obj['.topic-comment .comment-item'];
 			$data['comments_cnt'] = count($comments);
+			$data['created_at']   = date('Y-m-d H:i:s');
 			$opt_datas[] = $data;
 		}
 
