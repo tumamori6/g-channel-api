@@ -70,7 +70,9 @@ class GetContentsClass extends ModelClass
 	{
 		$sql = $this->createAddArticleSql('contents');
 		foreach($datas as $data){
-			$this->postParams($sql,$data);
+			if($data['comments_cnt'] >= 30){
+				$this->postParams($sql,$data);
+			}
 		}
 		$this->debug('Success : addArticlesData');
 
