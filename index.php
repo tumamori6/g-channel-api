@@ -1,15 +1,15 @@
 <?
 
-require('class/GetContentsClass.php');
+require(dirname(__FILE__) . '/class/ModelClass.php');
+$model = new ModelContentsClass();
 
-$contents = new GetContentsClass();
+// $contents = new GetContentsClass();
+// $datas = $contents->getArticleList(CONTENTS_URL);
+// $contents->addArticlesData($datas);
 
-$datas = [];
-//$data = $model->getAll
-$datas = $contents->getArticleList(CONTENTS_URL);
-// scheduler... php /app/cron.php
-$contents->addArticlesData($datas);
-//$data = file_get_contents(CONTENTS_URL);
+//include('index.html');
 
-include('index.html');
-?>
+$datas = $model->getAll('contents');
+
+echo json_encode($datas);
+
