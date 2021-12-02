@@ -49,7 +49,7 @@ class GetContentsClass extends ModelClass
 			];
 		}
 
-		array_splice($datas,10);
+		array_splice($datas,20);
 
 		foreach($datas as $data){
 			$obj                  = $this->htmlConvertObject($data['url']);
