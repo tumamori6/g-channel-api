@@ -1,7 +1,7 @@
 <?
 
-require(dirname(__FILE__) . 'class/ModelClass.php');
-$model = new ModelContentsClass();
+require(dirname(__FILE__) . '/class/ModelClass.php');
+$model = new ModelClass();
 
 // $contents = new GetContentsClass();
 // $datas = $contents->getArticleList(CONTENTS_URL);
