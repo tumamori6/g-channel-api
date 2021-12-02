@@ -52,9 +52,13 @@ class ModelClass extends CommonClass
 	{
 		$sql = "
    SELECT
-			*
+				*
 			FROM
     {$table_name}
+			WHERE
+				posted_at IS NULL AND
+				deleted_at IS NULL
+			ORDER BY created_at DESC
    LIMIT
     100
    ";
