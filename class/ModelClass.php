@@ -60,7 +60,7 @@ class ModelClass extends CommonClass
 				deleted_at IS NULL
 			ORDER BY created_at DESC
    LIMIT
-    1
+    100
    ";
 
 		$list = $this->_pdo->query($sql)->fetchAll();
