@@ -52,9 +52,12 @@ class ModelClass extends CommonClass
 	{
 		$sql = "
    SELECT
-				*
+			contents.id,
+			contents.url,
+			contents.comments_cnt,
+			contents.created_at
 			FROM
-    {$table_name}
+    {$table_name} as contents
 			WHERE
 				posted_at IS NULL AND
 				deleted_at IS NULL
