@@ -2,5 +2,5 @@
 require(dirname(__FILE__) . '/class/ModelClass.php');
 $model = new ModelClass();
 $datas = $model->getAll('contents');
-echo json_encode($datas);
+print_r($datas);
 
