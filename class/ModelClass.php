@@ -52,10 +52,10 @@ class ModelClass extends CommonClass
 	{
 		$sql = "
    SELECT
-			contents.id,
-			contents.url,
-			contents.comments_cnt,
-			contents.created_at
+				contents.id,
+				contents.url,
+				contents.comments_cnt,
+				contents.created_at
 			FROM
     {$table_name} as contents
 			WHERE
