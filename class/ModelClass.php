@@ -8,6 +8,8 @@ class ModelClass extends CommonClass
 	{
 		parent::__construct();
 		$this->_pdo          = $this->dbConnect();
+		$this->_posted       = isset($_POST['posted'])       ? $_POST['posted']       : 0;
+		$this->_content_id   = isset($_POST['content_id'])   ? $_POST['content_id']   : 0;
 	}
 
 	public function postParams($sql, $params)
@@ -66,4 +68,22 @@ class ModelClass extends CommonClass
 		$list = $this->_pdo->query($sql)->fetchAll();
 		return $list;
 	}
+
+	public function updatePosted($table_name)
+	{
+		$sql = "
+		UPDATE {$table_name}
+		SET posted_at = :posted_at
+		WHERE id = :id
+		";
+
+		$param = [
+			':id'        => $this->_content_id,
+			':posted_at' => date('Y-m-d H:i:s'),
+		];
+
+		$this->postParams($sql,$param);
+
+	}
+
 }
