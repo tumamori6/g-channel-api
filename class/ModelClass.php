@@ -1,4 +1,4 @@
-<?
+<?php
 
 require(dirname(__FILE__) . '/CommonClass.php');
 
